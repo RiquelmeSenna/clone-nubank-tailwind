@@ -9,7 +9,7 @@ export default function App() {
     return (
         <ScrollView className="size-full">
             <Header />
-            <Ballance ballance={1356.98} title="Conta" />
+            <Ballance ballance="13.356,98" title="Conta" />
             <ScrollView className="py-2" horizontal showsHorizontalScrollIndicator={false}>
                 <Area icon="pix" name="Pix" />
                 <Area icon="barcode" name="Pagar" />
@@ -49,6 +49,11 @@ export default function App() {
                 }
                 />
             </ScrollView>
+            <View className="h-1 mt-10 bg-gray-200/80"></View>
+
+            <Ballance ballance="2.776,56" title="Cartão de crédito" subtitle="Fatura Atual" children={
+                <Text className="mt-2  text-gray-600">Limite disponivel de R$ 5.56</Text>
+            } />
         </ScrollView>
     )
 }
